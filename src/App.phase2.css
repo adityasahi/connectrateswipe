@@ -1,0 +1,115 @@
+/* ── Phase 2 Gate ─────────────────────────────────────────────────────────── */
+.phase2-gate {
+  flex: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 32px 0 40px;
+}
+.pg-header { text-align: center; margin-bottom: 28px; }
+.pg-badge {
+  display: inline-block;
+  background: linear-gradient(135deg,var(--accent),var(--accent2));
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.pg-header h2 { font-size: 1.7rem; font-weight: 800; margin-bottom: 8px; }
+.pg-header p  { color: var(--muted); font-size: .9rem; line-height: 1.6; }
+
+/* ── Automation rate circle ─ */
+.rate-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.rate-circle { position: relative; width: 72px; height: 72px; flex-shrink: 0; }
+.rate-svg    { width: 72px; height: 72px; transform: rotate(-90deg); }
+.rate-bg   { stroke: var(--border); }
+.rate-fill { stroke: var(--accent2); transition: stroke-dasharray .8s ease; }
+.rate-num  {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 800; color: var(--accent2);
+}
+.rate-title { font-size: 1rem; font-weight: 700; }
+.rate-sub   { font-size: .82rem; color: var(--muted); margin-top: 3px; }
+
+/* ── Three buckets ── */
+.bucket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+@media(max-width:580px){ .bucket-grid { grid-template-columns: 1fr; } }
+.bucket {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+.bucket.approved { border-top: 3px solid var(--green); }
+.bucket.uncertain { border-top: 3px solid var(--amber); }
+.bucket.rejected  { border-top: 3px solid var(--red); }
+.bucket-icon { font-size: 1.4rem; margin-bottom: 4px; }
+.bucket-num  { font-size: 2rem; font-weight: 800; line-height: 1; }
+.bucket-lbl  { font-size: .82rem; font-weight: 700; margin-bottom: 2px; }
+.bucket-sub  { font-size: .7rem; color: var(--muted); margin-bottom: 10px; }
+.bucket-list { display: flex; flex-direction: column; gap: 4px; }
+.bucket-row  { display: flex; align-items: center; justify-content: space-between; }
+.br-name     { font-size: .72rem; color: var(--text2); }
+.br-score    { font-size: .72rem; font-weight: 700; padding: 1px 6px; border-radius: 4px; }
+.br-score.g  { background: rgba(34,197,94,.15);  color: #86efac; }
+.br-score.a  { background: rgba(245,158,11,.15); color: #fcd34d; }
+.br-score.r  { background: rgba(239,68,68,.15);  color: #fca5a5; }
+.bucket-more { font-size: .68rem; color: var(--muted); margin-top: 3px; }
+.pg-actions  { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ── Uncertain banner ── */
+.uncertain-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,158,11,.08);
+  border: 1px solid rgba(245,158,11,.2);
+  border-radius: 9px;
+  padding: 8px 14px;
+  margin: 8px 0 4px;
+  font-size: .8rem;
+}
+.ub-label { color: var(--muted); }
+.ub-score { font-weight: 800; color: var(--amber2); }
+.ub-sub   { color: var(--muted); font-size: .75rem; }
+
+/* ── Phase 3 auto recap ── */
+.auto-recap {
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  gap: 0;
+}
+.recap-item    { flex: 1; text-align: center; }
+.recap-num     { display: block; font-size: 1.6rem; font-weight: 800; }
+.recap-lbl     { font-size: .65rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-top: 2px; display: block; }
+.recap-divider { width: 1px; background: var(--border); align-self: stretch; margin: 0 8px; }
+
+/* ── rule-box in LearningScreen ── */
+.rule-box  { margin-top: 14px; padding: 12px; background: var(--surface); border-radius: 10px; border: 1px solid var(--border); }
+.rule-title { font-size: .68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 8px; }
+.rule-row  { font-size: .8rem; color: var(--text2); margin-bottom: 4px; }
+.split-box { margin-top: 12px; padding: 10px 12px; background: var(--surface); border-radius: 9px; border: 1px solid var(--border); font-size: .8rem; color: var(--text2); display: flex; flex-direction: column; gap: 4px; }
